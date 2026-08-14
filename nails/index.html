@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,17 +12,12 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #543542;
   background: #fff9fb;
 }
-
 
 /* HEADER */
 
@@ -56,6 +50,8 @@ header h1 {
   margin: 5px 0 15px;
 }
 
+/* NAVIGATION */
+
 nav {
   display: flex;
   justify-content: center;
@@ -75,8 +71,7 @@ nav a:hover {
   background: #f8d4df;
 }
 
-
-/* PAGE TITLE */
+/* TITLE */
 
 .page-title {
   text-align: center;
@@ -97,15 +92,14 @@ nav a:hover {
   margin: 8px 0;
 }
 
-.page-title .line {
+.line {
   width: 60px;
   height: 3px;
   background: #df7898;
   margin: 15px auto;
 }
 
-
-/* PRODUCT AREA */
+/* PRODUCTS */
 
 .products {
   width: 100%;
@@ -116,44 +110,30 @@ nav a:hover {
 
 .product-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
 }
-
 
 /* PRODUCT CARD */
 
 .product-card {
-  background: #ffffff;
-
+  background: white;
   border: 1px solid #efd2dc;
-
   border-radius: 18px;
-
   overflow: hidden;
-
-  box-shadow:
-    0 8px 25px rgba(90, 40, 60, 0.10);
-
+  box-shadow: 0 8px 25px rgba(90, 40, 60, 0.10);
   transition: 0.3s;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
-
-  box-shadow:
-    0 15px 30px rgba(190, 70, 110, 0.18);
 }
-
 
 /* IMAGE */
 
 .product-image {
   width: 100%;
-  height: 280px;
+  height: 250px;
   overflow: hidden;
   background: #fff0f5;
 }
@@ -161,14 +141,11 @@ nav a:hover {
 .product-image img {
   width: 100%;
   height: 100%;
-
   display: block;
-
   object-fit: cover;
 }
 
-
-/* INFORMATION */
+/* PRODUCT INFO */
 
 .product-info {
   padding: 18px;
@@ -177,94 +154,61 @@ nav a:hover {
 
 .product-info h3 {
   margin: 0 0 12px;
-
   font-family: Georgia, serif;
-
   font-size: 22px;
-
   color: #a83e63;
 }
 
 .product-info p {
   margin: 7px 0;
-
   color: #765966;
-
-  line-height: 1.5;
 }
 
 .product-info strong {
   color: #b7446b;
 }
 
-
-/* ORDER BUTTON */
+/* INSTAGRAM BUTTON */
 
 .buy-button {
   display: inline-block;
-
   margin-top: 12px;
-
   padding: 11px 22px;
-
   border-radius: 25px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #d35b83,
-      #b63c67
-    );
-
+  background: linear-gradient(135deg, #d35b83, #b63c67);
   color: white;
-
   text-decoration: none;
-
   font-weight: bold;
-
   font-size: 14px;
 }
 
+.buy-button:hover {
+  opacity: 0.9;
+}
 
 /* CONTACT */
 
 .contact {
   text-align: center;
-
   padding: 55px 20px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #fff0f5,
-      #ffe0eb
-    );
+  background: linear-gradient(135deg, #fff0f5, #ffe0eb);
 }
 
 .contact h2 {
   font-family: Georgia, serif;
-
   color: #5c3042;
-
   font-size: 35px;
 }
 
 .contact-button {
   display: inline-block;
-
   padding: 13px 27px;
-
   border-radius: 25px;
-
   background: #c34b72;
-
   color: white;
-
   text-decoration: none;
-
   font-weight: bold;
 }
-
 
 /* FOOTER */
 
@@ -292,18 +236,15 @@ footer a {
   font-weight: bold;
 }
 
-
 /* TABLET */
 
 @media (max-width: 900px) {
 
   .product-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
 }
-
 
 /* PHONE */
 
@@ -332,7 +273,7 @@ footer a {
   }
 
   .product-image {
-    height: 300px;
+    height: 280px;
   }
 
 }
@@ -340,16 +281,16 @@ footer a {
 </style>
 </head>
 
-
 <body>
 
+<!-- HEADER -->
 
 <header>
 
 <img
-  src="../images/logo.jpg"
-  class="logo"
-  alt="NAILS & ACESSÓRIOS">
+src="../images/logo.jpg"
+class="logo"
+alt="NAILS & ACESSÓRIOS">
 
 <h1>NAILS & ACESSÓRIOS</h1>
 
@@ -376,6 +317,7 @@ Contact
 </header>
 
 
+<!-- TITLE -->
 
 <section class="page-title">
 
@@ -392,6 +334,7 @@ Beautiful nails for every style
 </section>
 
 
+<!-- PRODUCTS -->
 
 <section class="products">
 
@@ -418,13 +361,10 @@ Beautiful nails for every style
 <strong>Pieces:</strong> " "
 </p>
 
-<p>
-" "
-</p>
-
 <a
 href="https://www.instagram.com/mehwish.accessories/"
 target="_blank"
+rel="noopener noreferrer"
 class="buy-button">
 
 DM to Order
@@ -432,8 +372,8 @@ DM to Order
 </a>
 
 </div>
-</div>
 
+</div>
 
 
 <!-- NAIL 2 -->
@@ -447,17 +387,28 @@ DM to Order
 <div class="product-info">
 
 <h3>" "</h3>
-<p><strong>Price:</strong> " "</p>
-<p><strong>Pieces:</strong> " "</p>
-<p>" "</p>
 
-<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+<p>
+<strong>Price:</strong> " "
+</p>
+
+<p>
+<strong>Pieces:</strong> " "
+</p>
+
+<a
+href="https://www.instagram.com/mehwish.accessories/"
+target="_blank"
+rel="noopener noreferrer"
+class="buy-button">
+
 DM to Order
+
 </a>
 
 </div>
-</div>
 
+</div>
 
 
 <!-- NAIL 3 -->
@@ -471,17 +422,28 @@ DM to Order
 <div class="product-info">
 
 <h3>" "</h3>
-<p><strong>Price:</strong> " "</p>
-<p><strong>Pieces:</strong> " "</p>
-<p>" "</p>
 
-<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+<p>
+<strong>Price:</strong> " "
+</p>
+
+<p>
+<strong>Pieces:</strong> " "
+</p>
+
+<a
+href="https://www.instagram.com/mehwish.accessories/"
+target="_blank"
+rel="noopener noreferrer"
+class="buy-button">
+
 DM to Order
+
 </a>
 
 </div>
-</div>
 
+</div>
 
 
 <!-- NAIL 4 -->
@@ -495,17 +457,24 @@ DM to Order
 <div class="product-info">
 
 <h3>" "</h3>
-<p><strong>Price:</strong> " "</p>
-<p><strong>Pieces:</strong> " "</p>
-<p>" "</p>
 
-<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+<p><strong>Price:</strong> " "</p>
+
+<p><strong>Pieces:</strong> " "</p>
+
+<a
+href="https://www.instagram.com/mehwish.accessories/"
+target="_blank"
+rel="noopener noreferrer"
+class="buy-button">
+
 DM to Order
+
 </a>
 
 </div>
-</div>
 
+</div>
 
 
 <!-- NAIL 5 -->
@@ -519,17 +488,24 @@ DM to Order
 <div class="product-info">
 
 <h3>" "</h3>
-<p><strong>Price:</strong> " "</p>
-<p><strong>Pieces:</strong> " "</p>
-<p>" "</p>
 
-<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+<p><strong>Price:</strong> " "</p>
+
+<p><strong>Pieces:</strong> " "</p>
+
+<a
+href="https://www.instagram.com/mehwish.accessories/"
+target="_blank"
+rel="noopener noreferrer"
+class="buy-button">
+
 DM to Order
+
 </a>
 
 </div>
-</div>
 
+</div>
 
 
 <!-- NAIL 6 -->
@@ -543,17 +519,24 @@ DM to Order
 <div class="product-info">
 
 <h3>" "</h3>
-<p><strong>Price:</strong> " "</p>
-<p><strong>Pieces:</strong> " "</p>
-<p>" "</p>
 
-<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+<p><strong>Price:</strong> " "</p>
+
+<p><strong>Pieces:</strong> " "</p>
+
+<a
+href="https://www.instagram.com/mehwish.accessories/"
+target="_blank"
+rel="noopener noreferrer"
+class="buy-button">
+
 DM to Order
+
 </a>
 
 </div>
-</div>
 
+</div>
 
 
 <!-- NAIL 7 -->
@@ -567,17 +550,24 @@ DM to Order
 <div class="product-info">
 
 <h3>" "</h3>
-<p><strong>Price:</strong> " "</p>
-<p><strong>Pieces:</strong> " "</p>
-<p>" "</p>
 
-<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+<p><strong>Price:</strong> " "</p>
+
+<p><strong>Pieces:</strong> " "</p>
+
+<a
+href="https://www.instagram.com/mehwish.accessories/"
+target="_blank"
+rel="noopener noreferrer"
+class="buy-button">
+
 DM to Order
+
 </a>
 
 </div>
-</div>
 
+</div>
 
 
 <!-- NAIL 8 -->
@@ -591,17 +581,24 @@ DM to Order
 <div class="product-info">
 
 <h3>" "</h3>
-<p><strong>Price:</strong> " "</p>
-<p><strong>Pieces:</strong> " "</p>
-<p>" "</p>
 
-<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+<p><strong>Price:</strong> " "</p>
+
+<p><strong>Pieces:</strong> " "</p>
+
+<a
+href="https://www.instagram.com/mehwish.accessories/"
+target="_blank"
+rel="noopener noreferrer"
+class="buy-button">
+
 DM to Order
+
 </a>
 
 </div>
-</div>
 
+</div>
 
 
 <!-- NAIL 9 -->
@@ -615,17 +612,24 @@ DM to Order
 <div class="product-info">
 
 <h3>" "</h3>
-<p><strong>Price:</strong> " "</p>
-<p><strong>Pieces:</strong> " "</p>
-<p>" "</p>
 
-<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+<p><strong>Price:</strong> " "</p>
+
+<p><strong>Pieces:</strong> " "</p>
+
+<a
+href="https://www.instagram.com/mehwish.accessories/"
+target="_blank"
+rel="noopener noreferrer"
+class="buy-button">
+
 DM to Order
+
 </a>
 
 </div>
-</div>
 
+</div>
 
 
 <!-- NAIL 10 -->
@@ -639,17 +643,24 @@ DM to Order
 <div class="product-info">
 
 <h3>" "</h3>
-<p><strong>Price:</strong> " "</p>
-<p><strong>Pieces:</strong> " "</p>
-<p>" "</p>
 
-<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+<p><strong>Price:</strong> " "</p>
+
+<p><strong>Pieces:</strong> " "</p>
+
+<a
+href="https://www.instagram.com/mehwish.accessories/"
+target="_blank"
+rel="noopener noreferrer"
+class="buy-button">
+
 DM to Order
+
 </a>
 
 </div>
-</div>
 
+</div>
 
 
 <!-- NAIL 11 -->
@@ -663,17 +674,24 @@ DM to Order
 <div class="product-info">
 
 <h3>" "</h3>
-<p><strong>Price:</strong> " "</p>
-<p><strong>Pieces:</strong> " "</p>
-<p>" "</p>
 
-<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+<p><strong>Price:</strong> " "</p>
+
+<p><strong>Pieces:</strong> " "</p>
+
+<a
+href="https://www.instagram.com/mehwish.accessories/"
+target="_blank"
+rel="noopener noreferrer"
+class="buy-button">
+
 DM to Order
+
 </a>
 
 </div>
-</div>
 
+</div>
 
 
 <!-- NAIL 12 -->
@@ -687,17 +705,24 @@ DM to Order
 <div class="product-info">
 
 <h3>" "</h3>
-<p><strong>Price:</strong> " "</p>
-<p><strong>Pieces:</strong> " "</p>
-<p>" "</p>
 
-<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+<p><strong>Price:</strong> " "</p>
+
+<p><strong>Pieces:</strong> " "</p>
+
+<a
+href="https://www.instagram.com/mehwish.accessories/"
+target="_blank"
+rel="noopener noreferrer"
+class="buy-button">
+
 DM to Order
+
 </a>
 
 </div>
-</div>
 
+</div>
 
 
 <!-- NAIL 13 -->
@@ -711,17 +736,24 @@ DM to Order
 <div class="product-info">
 
 <h3>" "</h3>
-<p><strong>Price:</strong> " "</p>
-<p><strong>Pieces:</strong> " "</p>
-<p>" "</p>
 
-<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+<p><strong>Price:</strong> " "</p>
+
+<p><strong>Pieces:</strong> " "</p>
+
+<a
+href="https://www.instagram.com/mehwish.accessories/"
+target="_blank"
+rel="noopener noreferrer"
+class="buy-button">
+
 DM to Order
+
 </a>
 
 </div>
-</div>
 
+</div>
 
 
 <!-- NAIL 14 -->
@@ -735,17 +767,24 @@ DM to Order
 <div class="product-info">
 
 <h3>" "</h3>
-<p><strong>Price:</strong> " "</p>
-<p><strong>Pieces:</strong> " "</p>
-<p>" "</p>
 
-<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+<p><strong>Price:</strong> " "</p>
+
+<p><strong>Pieces:</strong> " "</p>
+
+<a
+href="https://www.instagram.com/mehwish.accessories/"
+target="_blank"
+rel="noopener noreferrer"
+class="buy-button">
+
 DM to Order
+
 </a>
 
 </div>
-</div>
 
+</div>
 
 
 <!-- NAIL 15 -->
@@ -759,24 +798,34 @@ DM to Order
 <div class="product-info">
 
 <h3>" "</h3>
-<p><strong>Price:</strong> " "</p>
-<p><strong>Pieces:</strong> " "</p>
-<p>" "</p>
 
-<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+<p><strong>Price:</strong> " "</p>
+
+<p><strong>Pieces:</strong> " "</p>
+
+<a
+href="https://www.instagram.com/mehwish.accessories/"
+target="_blank"
+rel="noopener noreferrer"
+class="buy-button">
+
 DM to Order
+
 </a>
 
 </div>
+
 </div>
 
 
 </div>
+
 </section>
 
 
+<!-- CONTACT -->
 
-<section class="contact">
+<section class="contact" id="contact">
 
 <h2>Want to Order?</h2>
 
@@ -787,6 +836,7 @@ Send us a DM on Instagram.
 <a
 href="https://www.instagram.com/mehwish.accessories/"
 target="_blank"
+rel="noopener noreferrer"
 class="contact-button">
 
 Message Us
@@ -796,6 +846,7 @@ Message Us
 </section>
 
 
+<!-- FOOTER -->
 
 <footer>
 
@@ -803,18 +854,20 @@ Message Us
 src="../images/logo.jpg"
 alt="NAILS & ACESSÓRIOS">
 
-<h3>NAILS & ACESSÓRIOS</h3>
+<h3>
+NAILS & ACESSÓRIOS
+</h3>
 
 <a
 href="https://www.instagram.com/mehwish.accessories/"
-target="_blank">
+target="_blank"
+rel="noopener noreferrer">
 
 @mehwish.accessories
 
 </a>
 
 </footer>
-
 
 </body>
 </html>
