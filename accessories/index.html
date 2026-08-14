@@ -3,156 +3,261 @@
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+<title>NAILS & ACESSÓRIOS | Accessories</title>
 
-  <title>NAILS & ACESSÓRIOS | Accessories</title>
+<style>
 
-  <link rel="stylesheet"
-        href="../style.css">
+* {
+  box-sizing: border-box;
+}
 
-  <style>
+html {
+  scroll-behavior: smooth;
+}
 
-    .products {
-      padding: 70px 25px;
-      background: #fffafb;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #543542;
+  background: #fff9fb;
+}
 
-    .product-grid {
-      max-width: 1200px;
-      margin: auto;
+header {
+  text-align: center;
+  padding: 25px 15px 20px;
+  background: linear-gradient(180deg, #ffe4ed, #ffffff);
+  border-bottom: 1px solid #f1d1dc;
+}
 
-      display: grid;
+.logo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
 
-      grid-template-columns:
-        repeat(3, 1fr);
+header h1 {
+  font-family: Georgia, serif;
+  color: #b7446b;
+  font-size: 30px;
+  letter-spacing: 3px;
+  margin: 12px 0 5px;
+}
 
-      gap: 30px;
-    }
+.tagline {
+  color: #8e6675;
+  margin: 5px 0 15px;
+}
 
-    .product-card {
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
 
-      background: white;
+nav a {
+  text-decoration: none;
+  color: #873953;
+  font-weight: bold;
+  padding: 8px 13px;
+  border-radius: 20px;
+}
 
-      border-radius: 22px;
+nav a:hover {
+  background: #f8d4df;
+}
 
-      overflow: hidden;
+.page-title {
+  text-align: center;
+  padding: 40px 15px 25px;
+}
 
-      border: 1px solid #f0d3dc;
+.page-title p {
+  color: #d15880;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
 
-      box-shadow:
-        0 10px 30px
-        rgba(89, 42, 60, 0.10);
+.page-title h2 {
+  font-family: Georgia, serif;
+  font-size: 42px;
+  color: #542d3d;
+  margin: 8px 0;
+}
 
-      transition: 0.3s;
-    }
+.line {
+  width: 60px;
+  height: 3px;
+  background: #df7898;
+  margin: 15px auto;
+}
 
-    .product-card:hover {
+.products {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 20px 70px;
+}
 
-      transform: translateY(-7px);
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
 
-      box-shadow:
-        0 18px 38px
-        rgba(196, 77, 119, 0.18);
-    }
+.product-card {
+  background: #ffffff;
+  border: 1px solid #efd2dc;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(90, 40, 60, 0.10);
+  transition: 0.3s;
+}
 
-    .product-card > img {
+.product-card:hover {
+  transform: translateY(-5px);
+}
 
-      width: 100%;
+.product-image {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: #fff0f5;
+}
 
-      height: 350px;
+.product-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
 
-      object-fit: cover;
+.product-info {
+  padding: 18px;
+  text-align: center;
+}
 
-      display: block;
-    }
+.product-info h3 {
+  margin: 0 0 12px;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  color: #a83e63;
+}
 
-    .product-info {
+.product-info p {
+  margin: 7px 0;
+  color: #765966;
+  line-height: 1.5;
+}
 
-      padding: 22px;
+.product-info strong {
+  color: #b7446b;
+}
 
-      text-align: center;
-    }
+.buy-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 11px 22px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #d35b83, #b63c67);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
 
-    .product-info h3 {
+.contact {
+  text-align: center;
+  padding: 55px 20px;
+  background: linear-gradient(135deg, #fff0f5, #ffe0eb);
+}
 
-      font-family: Georgia, serif;
+.contact h2 {
+  font-family: Georgia, serif;
+  color: #5c3042;
+  font-size: 35px;
+}
 
-      color: #a83e63;
+.contact-button {
+  display: inline-block;
+  padding: 13px 27px;
+  border-radius: 25px;
+  background: #c34b72;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-      font-size: 25px;
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  background: white;
+}
 
-      margin: 5px 0 15px;
-    }
+footer img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
-    .product-info p {
+footer h3 {
+  color: #b5446b;
+  font-family: Georgia, serif;
+}
 
-      color: #765765;
+footer a {
+  color: #c04d75;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-      line-height: 1.6;
+@media (max-width: 900px) {
 
-      margin: 7px 0;
-    }
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-    .product-info strong {
+}
 
-      color: #b74469;
-    }
+@media (max-width: 600px) {
 
-    .buy-button {
+  header h1 {
+    font-size: 24px;
+  }
 
-      display: inline-block;
+  .logo {
+    width: 105px;
+    height: 105px;
+  }
 
-      margin-top: 15px;
+  .page-title h2 {
+    font-size: 34px;
+  }
 
-      padding: 12px 25px;
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
 
-      border-radius: 25px;
+  .products {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
-      color: white;
+  .product-image {
+    height: 300px;
+  }
 
-      text-decoration: none;
+}
 
-      font-weight: bold;
-
-      background:
-        linear-gradient(
-          135deg,
-          #d35b83,
-          #b63c67
-        );
-
-      transition: 0.3s;
-    }
-
-    .buy-button:hover {
-
-      transform: translateY(-3px);
-    }
-
-    @media (max-width: 900px) {
-
-      .product-grid {
-
-        grid-template-columns:
-          repeat(2, 1fr);
-      }
-
-    }
-
-    @media (max-width: 600px) {
-
-      .product-grid {
-
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-  </style>
-
+</style>
 </head>
 
 
@@ -161,61 +266,44 @@
 
 <header>
 
-  <img
-    src="../images/logo.jpg"
-    class="logo"
-    alt="NAILS & ACESSÓRIOS">
+<img
+src="../images/logo.jpg"
+class="logo"
+alt="NAILS & ACESSÓRIOS">
 
-  <h1>
-    NAILS & ACESSÓRIOS
-  </h1>
+<h1>NAILS & ACESSÓRIOS</h1>
 
-  <p class="tagline">
-    Nails • Accessories
-  </p>
+<p class="tagline">
+Nails • Accessories
+</p>
 
-  <nav>
+<nav>
 
-    <a href="../index.html">
-      Home
-    </a>
+<a href="../index.html">Home</a>
 
-    <a href="../nails/index.html">
-      Nails
-    </a>
+<a href="../nails/index.html">Nails</a>
 
-    <a href="index.html">
-      Accessories
-    </a>
+<a href="index.html">Accessories</a>
 
-    <a href="../index.html#contact">
-      Contact
-    </a>
+<a href="../index.html#contact">Contact</a>
 
-  </nav>
+</nav>
 
 </header>
 
 
 
-<section class="hero">
+<section class="page-title">
 
-  <div class="hero-content">
+<p>✦ COLLECTION 02 ✦</p>
 
-    <p class="small-title">
-      ✦ COLLECTION 02 ✦
-    </p>
+<h2>Accessories</h2>
 
-    <h2>
-      Beautiful
-      <span>Accessories</span>
-    </h2>
+<div class="line"></div>
 
-    <p>
-      Explore our collection of beautiful accessories.
-    </p>
-
-  </div>
+<p>
+Beautiful accessories for every style
+</p>
 
 </section>
 
@@ -223,532 +311,330 @@
 
 <section class="products">
 
+<div class="product-grid">
+
 
-  <div class="section-heading">
+<!-- ACCESSORY 1 -->
 
-    <p>
-      ✦ ACCESSORIES COLLECTION ✦
-    </p>
+<div class="product-card">
+<div class="product-image">
+<img src="../images/accessory1.jpg" alt="Accessory 1">
+</div>
 
-    <h2>
-      Our Collection
-    </h2>
+<div class="product-info">
+<h3>" "</h3>
+<p><strong>Price:</strong> " "</p>
+<p><strong>Pieces:</strong> " "</p>
+<p>" "</p>
 
-    <div class="line"></div>
+<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+DM to Order
+</a>
+</div>
+</div>
+
 
-    <span>
-      Choose your favourite piece
-    </span>
+<!-- ACCESSORY 2 -->
 
-  </div>
+<div class="product-card">
+<div class="product-image">
+<img src="../images/accessory2.jpg" alt="Accessory 2">
+</div>
 
+<div class="product-info">
+<h3>" "</h3>
+<p><strong>Price:</strong> " "</p>
+<p><strong>Pieces:</strong> " "</p>
+<p>" "</p>
 
+<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+DM to Order
+</a>
+</div>
+</div>
+
 
-  <div class="product-grid">
+<!-- ACCESSORY 3 -->
 
+<div class="product-card">
+<div class="product-image">
+<img src="../images/accessory3.jpg" alt="Accessory 3">
+</div>
 
-    <!-- ACCESSORY 1 -->
+<div class="product-info">
+<h3>" "</h3>
+<p><strong>Price:</strong> " "</p>
+<p><strong>Pieces:</strong> " "</p>
+<p>" "</p>
 
-    <div class="product-card">
+<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+DM to Order
+</a>
+</div>
+</div>
+
 
-      <img src="../images/accessory1.jpg"
-           alt="Accessory 1">
+<!-- ACCESSORY 4 -->
 
-      <div class="product-info">
+<div class="product-card">
+<div class="product-image">
+<img src="../images/accessory4.jpg" alt="Accessory 4">
+</div>
 
-        <h3>" "</h3>
+<div class="product-info">
+<h3>" "</h3>
+<p><strong>Price:</strong> " "</p>
+<p><strong>Pieces:</strong> " "</p>
+<p>" "</p>
 
-        <p>
-          <strong>Price:</strong>
-          " "
-        </p>
+<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+DM to Order
+</a>
+</div>
+</div>
+
 
-        <p>
-          <strong>Pieces:</strong>
-          " "
-        </p>
+<!-- ACCESSORY 5 -->
 
-        <p>
-          " "
-        </p>
+<div class="product-card">
+<div class="product-image">
+<img src="../images/accessory5.jpg" alt="Accessory 5">
+</div>
 
-        <a
-          href="https://www.instagram.com/mehwish.accessories/"
-          target="_blank"
-          class="buy-button">
+<div class="product-info">
+<h3>" "</h3>
+<p><strong>Price:</strong> " "</p>
+<p><strong>Pieces:</strong> " "</p>
+<p>" "</p>
 
-          DM to Order
+<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+DM to Order
+</a>
+</div>
+</div>
+
 
-        </a>
+<!-- ACCESSORY 6 -->
 
-      </div>
+<div class="product-card">
+<div class="product-image">
+<img src="../images/accessory6.jpg" alt="Accessory 6">
+</div>
 
-    </div>
+<div class="product-info">
+<h3>" "</h3>
+<p><strong>Price:</strong> " "</p>
+<p><strong>Pieces:</strong> " "</p>
+<p>" "</p>
 
+<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+DM to Order
+</a>
+</div>
+</div>
+
 
+<!-- ACCESSORY 7 -->
 
-    <!-- ACCESSORY 2 -->
+<div class="product-card">
+<div class="product-image">
+<img src="../images/accessory7.jpg" alt="Accessory 7">
+</div>
 
-    <div class="product-card">
+<div class="product-info">
+<h3>" "</h3>
+<p><strong>Price:</strong> " "</p>
+<p><strong>Pieces:</strong> " "</p>
+<p>" "</p>
 
-      <img src="../images/accessory2.jpg"
-           alt="Accessory 2">
+<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+DM to Order
+</a>
+</div>
+</div>
+
 
-      <div class="product-info">
+<!-- ACCESSORY 8 -->
 
-        <h3>" "</h3>
+<div class="product-card">
+<div class="product-image">
+<img src="../images/accessory8.jpg" alt="Accessory 8">
+</div>
 
-        <p><strong>Price:</strong> " "</p>
+<div class="product-info">
+<h3>" "</h3>
+<p><strong>Price:</strong> " "</p>
+<p><strong>Pieces:</strong> " "</p>
+<p>" "</p>
 
-        <p><strong>Pieces:</strong> " "</p>
+<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+DM to Order
+</a>
+</div>
+</div>
+
 
-        <p>" "</p>
+<!-- ACCESSORY 9 -->
 
-        <a href="https://www.instagram.com/mehwish.accessories/"
-           target="_blank"
-           class="buy-button">
+<div class="product-card">
+<div class="product-image">
+<img src="../images/accessory9.jpg" alt="Accessory 9">
+</div>
 
-          DM to Order
+<div class="product-info">
+<h3>" "</h3>
+<p><strong>Price:</strong> " "</p>
+<p><strong>Pieces:</strong> " "</p>
+<p>" "</p>
 
-        </a>
+<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+DM to Order
+</a>
+</div>
+</div>
+
 
-      </div>
+<!-- ACCESSORY 10 -->
 
-    </div>
+<div class="product-card">
+<div class="product-image">
+<img src="../images/accessory10.jpg" alt="Accessory 10">
+</div>
 
+<div class="product-info">
+<h3>" "</h3>
+<p><strong>Price:</strong> " "</p>
+<p><strong>Pieces:</strong> " "</p>
+<p>" "</p>
 
+<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+DM to Order
+</a>
+</div>
+</div>
+
 
-    <!-- ACCESSORY 3 -->
+<!-- ACCESSORY 11 -->
 
-    <div class="product-card">
+<div class="product-card">
+<div class="product-image">
+<img src="../images/accessory11.jpg" alt="Accessory 11">
+</div>
 
-      <img src="../images/accessory3.jpg"
-           alt="Accessory 3">
+<div class="product-info">
+<h3>" "</h3>
+<p><strong>Price:</strong> " "</p>
+<p><strong>Pieces:</strong> " "</p>
+<p>" "</p>
 
-      <div class="product-info">
+<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+DM to Order
+</a>
+</div>
+</div>
 
-        <h3>" "</h3>
 
-        <p><strong>Price:</strong> " "</p>
+<!-- ACCESSORY 12 -->
 
-        <p><strong>Pieces:</strong> " "</p>
+<div class="product-card">
+<div class="product-image">
+<img src="../images/accessory12.jpg" alt="Accessory 12">
+</div>
 
-        <p>" "</p>
+<div class="product-info">
+<h3>" "</h3>
+<p><strong>Price:</strong> " "</p>
+<p><strong>Pieces:</strong> " "</p>
+<p>" "</p>
 
-        <a href="https://www.instagram.com/mehwish.accessories/"
-           target="_blank"
-           class="buy-button">
+<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+DM to Order
+</a>
+</div>
+</div>
 
-          DM to Order
 
-        </a>
+<!-- ACCESSORY 13 -->
 
-      </div>
+<div class="product-card">
+<div class="product-image">
+<img src="../images/accessory13.jpg" alt="Accessory 13">
+</div>
 
-    </div>
+<div class="product-info">
+<h3>" "</h3>
+<p><strong>Price:</strong> " "</p>
+<p><strong>Pieces:</strong> " "</p>
+<p>" "</p>
 
+<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+DM to Order
+</a>
+</div>
+</div>
 
 
-    <!-- ACCESSORY 4 -->
+<!-- ACCESSORY 14 -->
 
-    <div class="product-card">
+<div class="product-card">
+<div class="product-image">
+<img src="../images/accessory14.jpg" alt="Accessory 14">
+</div>
 
-      <img src="../images/accessory4.jpg"
-           alt="Accessory 4">
+<div class="product-info">
+<h3>" "</h3>
+<p><strong>Price:</strong> " "</p>
+<p><strong>Pieces:</strong> " "</p>
+<p>" "</p>
 
-      <div class="product-info">
+<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+DM to Order
+</a>
+</div>
+</div>
 
-        <h3>" "</h3>
 
-        <p><strong>Price:</strong> " "</p>
+<!-- ACCESSORY 15 -->
 
-        <p><strong>Pieces:</strong> " "</p>
+<div class="product-card">
+<div class="product-image">
+<img src="../images/accessory15.jpg" alt="Accessory 15">
+</div>
 
-        <p>" "</p>
+<div class="product-info">
+<h3>" "</h3>
+<p><strong>Price:</strong> " "</p>
+<p><strong>Pieces:</strong> " "</p>
+<p>" "</p>
 
-        <a href="https://www.instagram.com/mehwish.accessories/"
-           target="_blank"
-           class="buy-button">
+<a href="https://www.instagram.com/mehwish.accessories/" target="_blank" class="buy-button">
+DM to Order
+</a>
+</div>
+</div>
 
-          DM to Order
 
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- ACCESSORY 5 -->
-
-    <div class="product-card">
-
-      <img src="../images/accessory5.jpg"
-           alt="Accessory 5">
-
-      <div class="product-info">
-
-        <h3>" "</h3>
-
-        <p><strong>Price:</strong> " "</p>
-
-        <p><strong>Pieces:</strong> " "</p>
-
-        <p>" "</p>
-
-        <a href="https://www.instagram.com/mehwish.accessories/"
-           target="_blank"
-           class="buy-button">
-
-          DM to Order
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- ACCESSORY 6 -->
-
-    <div class="product-card">
-
-      <img src="../images/accessory6.jpg"
-           alt="Accessory 6">
-
-      <div class="product-info">
-
-        <h3>" "</h3>
-
-        <p><strong>Price:</strong> " "</p>
-
-        <p><strong>Pieces:</strong> " "</p>
-
-        <p>" "</p>
-
-        <a href="https://www.instagram.com/mehwish.accessories/"
-           target="_blank"
-           class="buy-button">
-
-          DM to Order
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- ACCESSORY 7 -->
-
-    <div class="product-card">
-
-      <img src="../images/accessory7.jpg"
-           alt="Accessory 7">
-
-      <div class="product-info">
-
-        <h3>" "</h3>
-
-        <p><strong>Price:</strong> " "</p>
-
-        <p><strong>Pieces:</strong> " "</p>
-
-        <p>" "</p>
-
-        <a href="https://www.instagram.com/mehwish.accessories/"
-           target="_blank"
-           class="buy-button">
-
-          DM to Order
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- ACCESSORY 8 -->
-
-    <div class="product-card">
-
-      <img src="../images/accessory8.jpg"
-           alt="Accessory 8">
-
-      <div class="product-info">
-
-        <h3>" "</h3>
-
-        <p><strong>Price:</strong> " "</p>
-
-        <p><strong>Pieces:</strong> " "</p>
-
-        <p>" "</p>
-
-        <a href="https://www.instagram.com/mehwish.accessories/"
-           target="_blank"
-           class="buy-button">
-
-          DM to Order
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- ACCESSORY 9 -->
-
-    <div class="product-card">
-
-      <img src="../images/accessory9.jpg"
-           alt="Accessory 9">
-
-      <div class="product-info">
-
-        <h3>" "</h3>
-
-        <p><strong>Price:</strong> " "</p>
-
-        <p><strong>Pieces:</strong> " "</p>
-
-        <p>" "</p>
-
-        <a href="https://www.instagram.com/mehwish.accessories/"
-           target="_blank"
-           class="buy-button">
-
-          DM to Order
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- ACCESSORY 10 -->
-
-    <div class="product-card">
-
-      <img src="../images/accessory10.jpg"
-           alt="Accessory 10">
-
-      <div class="product-info">
-
-        <h3>" "</h3>
-
-        <p><strong>Price:</strong> " "</p>
-
-        <p><strong>Pieces:</strong> " "</p>
-
-        <p>" "</p>
-
-        <a href="https://www.instagram.com/mehwish.accessories/"
-           target="_blank"
-           class="buy-button">
-
-          DM to Order
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- ACCESSORY 11 -->
-
-    <div class="product-card">
-
-      <img src="../images/accessory11.jpg"
-           alt="Accessory 11">
-
-      <div class="product-info">
-
-        <h3>" "</h3>
-
-        <p><strong>Price:</strong> " "</p>
-
-        <p><strong>Pieces:</strong> " "</p>
-
-        <p>" "</p>
-
-        <a href="https://www.instagram.com/mehwish.accessories/"
-           target="_blank"
-           class="buy-button">
-
-          DM to Order
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- ACCESSORY 12 -->
-
-    <div class="product-card">
-
-      <img src="../images/accessory12.jpg"
-           alt="Accessory 12">
-
-      <div class="product-info">
-
-        <h3>" "</h3>
-
-        <p><strong>Price:</strong> " "</p>
-
-        <p><strong>Pieces:</strong> " "</p>
-
-        <p>" "</p>
-
-        <a href="https://www.instagram.com/mehwish.accessories/"
-           target="_blank"
-           class="buy-button">
-
-          DM to Order
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- ACCESSORY 13 -->
-
-    <div class="product-card">
-
-      <img src="../images/accessory13.jpg"
-           alt="Accessory 13">
-
-      <div class="product-info">
-
-        <h3>" "</h3>
-
-        <p><strong>Price:</strong> " "</p>
-
-        <p><strong>Pieces:</strong> " "</p>
-
-        <p>" "</p>
-
-        <a href="https://www.instagram.com/mehwish.accessories/"
-           target="_blank"
-           class="buy-button">
-
-          DM to Order
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- ACCESSORY 14 -->
-
-    <div class="product-card">
-
-      <img src="../images/accessory14.jpg"
-           alt="Accessory 14">
-
-      <div class="product-info">
-
-        <h3>" "</h3>
-
-        <p><strong>Price:</strong> " "</p>
-
-        <p><strong>Pieces:</strong> " "</p>
-
-        <p>" "</p>
-
-        <a href="https://www.instagram.com/mehwish.accessories/"
-           target="_blank"
-           class="buy-button">
-
-          DM to Order
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- ACCESSORY 15 -->
-
-    <div class="product-card">
-
-      <img src="../images/accessory15.jpg"
-           alt="Accessory 15">
-
-      <div class="product-info">
-
-        <h3>" "</h3>
-
-        <p><strong>Price:</strong> " "</p>
-
-        <p><strong>Pieces:</strong> " "</p>
-
-        <p>" "</p>
-
-        <a href="https://www.instagram.com/mehwish.accessories/"
-           target="_blank"
-           class="buy-button">
-
-          DM to Order
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-  </div>
-
+</div>
 </section>
 
 
 
 <section class="contact">
 
-  <div class="contact-inner">
+<h2>Want to Order?</h2>
 
-    <p>✦ GET IN TOUCH ✦</p>
+<p>
+Send us a DM on Instagram.
+</p>
 
-    <h2>Want to Order?</h2>
+<a
+href="https://www.instagram.com/mehwish.accessories/"
+target="_blank"
+class="contact-button">
 
-    <p>
-      Send us a DM on Instagram
-      to place your order.
-    </p>
+Message Us
 
-    <a
-      href="https://www.instagram.com/mehwish.accessories/"
-      class="contact-button"
-      target="_blank">
-
-      Message Us on Instagram
-
-    </a>
-
-  </div>
+</a>
 
 </section>
 
@@ -756,25 +642,19 @@
 
 <footer>
 
-  <img
-    src="../images/logo.jpg"
-    alt="NAILS & ACESSÓRIOS">
+<img
+src="../images/logo.jpg"
+alt="NAILS & ACESSÓRIOS">
 
-  <h3>
-    NAILS & ACESSÓRIOS
-  </h3>
+<h3>NAILS & ACESSÓRIOS</h3>
 
-  <p>
-    Nails • Accessories
-  </p>
+<a
+href="https://www.instagram.com/mehwish.accessories/"
+target="_blank">
 
-  <a
-    href="https://www.instagram.com/mehwish.accessories/"
-    target="_blank">
+@mehwish.accessories
 
-    @mehwish.accessories
-
-  </a>
+</a>
 
 </footer>
 
