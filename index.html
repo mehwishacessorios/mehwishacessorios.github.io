@@ -1,527 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta charset="UTF-8">
+<title>NAILS & ACESSÓRIOS</title>
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
+<style>
 
-  <title>NAILS & ACESSÓRIOS</title>
+* {
+    box-sizing: border-box;
+}
 
-  <link
-    rel="stylesheet"
-    href="style.css">
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #543542;
+    background: #fff9fb;
+}
 
+/* HEADER */
 
-  <!-- HOMEPAGE-ONLY STYLING -->
+header {
+    text-align: center;
+    padding: 25px 15px 15px;
+    background: linear-gradient(180deg, #ffe4ed, #ffffff);
+    border-bottom: 1px solid #f1d1dc;
+}
 
-  <style>
+.logo {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
 
-    .homepage-collections {
-      width: 100%;
-      padding: 45px 20px 65px;
-      background: #ffffff;
+header h1 {
+    font-family: Georgia, serif;
+    color: #b7446b;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin: 12px 0 5px;
+}
+
+.tagline {
+    color: #8e6675;
+    margin: 5px 0 15px;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #873953;
+    font-weight: bold;
+    padding: 8px 13px;
+    border-radius: 20px;
+}
+
+nav a:hover {
+    background: #f8d4df;
+}
+
+/* MAIN */
+
+main {
+    text-align: center;
+    padding: 25px 15px 60px;
+}
+
+.intro {
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.intro p:first-child {
+    color: #d15880;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.intro h2 {
+    font-family: Georgia, serif;
+    color: #542d3d;
+    font-size: 42px;
+    margin: 8px 0;
+}
+
+.line {
+    width: 60px;
+    height: 3px;
+    background: #df7898;
+    margin: 15px auto;
+}
+
+.intro p:last-child {
+    color: #8e6675;
+}
+
+/* CATEGORY FOLDERS */
+
+.categories {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.category-card {
+    display: block;
+    background: #ffffff;
+    border: 1px solid #efd2dc;
+    border-radius: 22px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #543542;
+    box-shadow: 0 8px 25px rgba(90, 40, 60, 0.10);
+    transition: 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(90, 40, 60, 0.16);
+}
+
+.category-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #fff0f5;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.category-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.category-info h2 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    color: #a83e63;
+    margin: 0 0 8px;
+}
+
+.category-info p {
+    margin: 0;
+    color: #8e6675;
+}
+
+/* INSTAGRAM */
+
+.instagram {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.instagram h2 {
+    font-family: Georgia, serif;
+    color: #5c3042;
+    font-size: 30px;
+}
+
+.instagram p {
+    color: #765966;
+}
+
+.instagram-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 13px 28px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #d35b83, #b63c67);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.instagram-button:hover {
+    opacity: 0.9;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    background: white;
+    border-top: 1px solid #f1d1dc;
+}
+
+footer img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+footer h3 {
+    font-family: Georgia, serif;
+    color: #b5446b;
+    margin: 10px 0;
+}
+
+footer a {
+    color: #c04d75;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* TABLET */
+
+@media (max-width: 750px) {
+
+    .categories {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
     }
 
-    .homepage-title {
-      text-align: center;
-      margin-bottom: 30px;
+    .category-image {
+        height: 240px;
     }
 
-    .homepage-title p {
-      color: #d15880;
-      letter-spacing: 4px;
-      font-size: 12px;
-      font-weight: bold;
-      margin: 0 0 8px;
+}
+
+/* PHONE */
+
+@media (max-width: 600px) {
+
+    header {
+        padding-top: 20px;
     }
 
-    .homepage-title h2 {
-      margin: 0;
-      font-family: Georgia, serif;
-      font-size: 40px;
-      color: #542d3d;
+    .logo {
+        width: 105px;
+        height: 105px;
     }
 
-    .homepage-line {
-      width: 65px;
-      height: 3px;
-      margin: 14px auto;
-      border-radius: 10px;
-      background: #df7898;
+    header h1 {
+        font-size: 23px;
+        letter-spacing: 2px;
     }
 
-
-    /* TWO FOLDERS */
-
-    .homepage-categories {
-      width: 100%;
-      max-width: 850px;
-
-      margin-left: auto;
-      margin-right: auto;
-
-      display: flex;
-
-      flex-direction: row;
-
-      justify-content: center;
-
-      align-items: stretch;
-
-      gap: 30px;
+    .intro {
+        padding-top: 5px;
     }
 
-
-    .homepage-card {
-      width: 380px;
-      max-width: 380px;
-
-      display: block;
-
-      overflow: hidden;
-
-      text-decoration: none;
-
-      background: #ffffff;
-
-      border: 1px solid #f0d3dc;
-
-      border-radius: 22px;
-
-      box-shadow:
-        0 10px 30px
-        rgba(89, 42, 60, 0.10);
-
-      transition: 0.3s;
-    }
-
-
-    .homepage-card:hover {
-      transform: translateY(-7px);
-
-      box-shadow:
-        0 20px 40px
-        rgba(196, 77, 119, 0.18);
-    }
-
-
-    .homepage-card-image {
-      width: 100%;
-      height: 300px;
-
-      overflow: hidden;
-
-      background: #fff0f5;
-    }
-
-
-    .homepage-card-image img {
-      width: 100%;
-      height: 100%;
-
-      display: block;
-
-      object-fit: cover;
-
-      transition: 0.4s;
-    }
-
-
-    .homepage-card:hover
-    .homepage-card-image img {
-      transform: scale(1.04);
-    }
-
-
-    .homepage-card-content {
-      text-align: center;
-
-      padding: 20px 15px 23px;
-    }
-
-
-    .homepage-card-content h3 {
-      margin: 0 0 8px;
-
-      font-family: Georgia, serif;
-
-      font-size: 29px;
-
-      color: #a83e63;
-    }
-
-
-    .homepage-card-content span {
-      color: #876572;
-
-      font-size: 14px;
-    }
-
-
-    /* CONTACT */
-
-    .homepage-contact {
-      padding: 55px 20px;
-
-      text-align: center;
-
-      background:
-        linear-gradient(
-          135deg,
-          #fff0f5,
-          #ffe0eb
-        );
-    }
-
-
-    .homepage-contact p:first-child {
-      color: #d15880;
-
-      letter-spacing: 3px;
-
-      font-size: 12px;
-
-      font-weight: bold;
-    }
-
-
-    .homepage-contact h2 {
-      margin: 8px 0;
-
-      font-family: Georgia, serif;
-
-      font-size: 36px;
-
-      color: #5c3042;
-    }
-
-
-    .homepage-contact-button {
-      display: inline-block;
-
-      margin-top: 12px;
-
-      padding: 14px 30px;
-
-      color: white;
-
-      text-decoration: none;
-
-      font-weight: bold;
-
-      border-radius: 30px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #d35b83,
-          #b63c67
-        );
-    }
-
-
-    /* LAPTOP */
-
-    @media (min-width: 801px) {
-
-      .homepage-categories {
-
-        flex-direction: row;
-
-        justify-content: center;
-
-      }
-
-    }
-
-
-    /* PHONE */
-
-    @media (max-width: 800px) {
-
-      .homepage-collections {
-        padding: 35px 15px 50px;
-      }
-
-      .homepage-title h2 {
+    .intro h2 {
         font-size: 34px;
-      }
+    }
 
-      .homepage-categories {
-
-        width: 100%;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        justify-content: center;
-
-        gap: 25px;
-
-      }
-
-      .homepage-card {
-
-        width: 92%;
-
+    .categories {
+        grid-template-columns: 1fr;
         max-width: 400px;
-
-      }
-
-      .homepage-card-image {
-
-        height: 300px;
-
-      }
-
+        gap: 22px;
     }
 
-
-    /* SMALL PHONE */
-
-    @media (max-width: 450px) {
-
-      .homepage-card {
-
-        width: 94%;
-
-      }
-
-      .homepage-card-image {
-
-        height: 270px;
-
-      }
-
+    .category-image {
+        height: 280px;
     }
 
-  </style>
+    .category-info h2 {
+        font-size: 26px;
+    }
 
+}
+
+</style>
 </head>
 
 
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 
 <header>
 
-  <img
-    src="images/logo.jpg"
-    class="logo"
-    alt="NAILS & ACESSÓRIOS">
+    <img
+        src="images/logo.jpg"
+        class="logo"
+        alt="NAILS & ACESSÓRIOS">
 
+    <h1>NAILS & ACESSÓRIOS</h1>
 
-  <h1>
-    NAILS & ACESSÓRIOS
-  </h1>
+    <p class="tagline">
+        Nails • Accessories
+    </p>
 
+    <nav>
 
-  <p class="tagline">
-    Nails • Accessories
-  </p>
+        <a href="index.html">
+            Home
+        </a>
 
+        <a href="nails/index.html">
+            Nails
+        </a>
 
-  <nav>
+        <a href="accessories/index.html">
+            Accessories
+        </a>
 
-    <a href="index.html">
-      Home
-    </a>
+        <a href="#contact">
+            Contact
+        </a>
 
-    <a href="nails/index.html">
-      Nails
-    </a>
-
-    <a href="accessories/index.html">
-      Accessories
-    </a>
-
-    <a href="#contact">
-      Contact
-    </a>
-
-  </nav>
+    </nav>
 
 </header>
 
 
+<!-- MAIN -->
 
-<!-- ================= COLLECTIONS ================= -->
+<main>
 
-<section
-  class="homepage-collections">
+    <section class="intro">
 
+        <p>✦ WELCOME ✦</p>
 
-  <div class="homepage-title">
+        <h2>Shop Our Collections</h2>
 
-    <p>
-      ✦ OUR COLLECTIONS ✦
-    </p>
+        <div class="line"></div>
 
-    <h2>
-      Shop Now
-    </h2>
+        <p>
+            Explore our nails and accessories collections.
+        </p>
 
-    <div class="homepage-line"></div>
-
-  </div>
+    </section>
 
 
+    <!-- TWO FOLDERS -->
 
-  <div class="homepage-categories">
-
-
-    <!-- NAILS -->
-
-    <a
-      href="nails/index.html"
-      class="homepage-card">
+    <section class="categories">
 
 
-      <div class="homepage-card-image">
+        <!-- NAILS -->
 
-        <img
-          src="images/nails-cover.jpg"
-          alt="Nails Collection">
+        <a
+            href="nails/index.html"
+            class="category-card">
 
-      </div>
+            <div class="category-image">
 
+                <img
+                    src="images/nails-folder.jpg"
+                    alt="Nails Collection">
 
-      <div class="homepage-card-content">
+            </div>
 
-        <h3>
-          Nails
-        </h3>
+            <div class="category-info">
 
-        <span>
-          Explore Collection →
-        </span>
+                <h2>Nails</h2>
 
-      </div>
+                <p>
+                    Explore our nail collection
+                </p>
 
+            </div>
 
-    </a>
-
-
-
-    <!-- ACCESSORIES -->
-
-    <a
-      href="accessories/index.html"
-      class="homepage-card">
+        </a>
 
 
-      <div class="homepage-card-image">
+        <!-- ACCESSORIES -->
 
-        <img
-          src="images/accessories-cover.jpg"
-          alt="Accessories Collection">
+        <a
+            href="accessories/index.html"
+            class="category-card">
 
-      </div>
+            <div class="category-image">
 
+                <img
+                    src="images/accessories-folder.jpg"
+                    alt="Accessories Collection">
 
-      <div class="homepage-card-content">
+            </div>
 
-        <h3>
-          Accessories
-        </h3>
+            <div class="category-info">
 
-        <span>
-          Explore Collection →
-        </span>
+                <h2>Accessories</h2>
 
-      </div>
+                <p>
+                    Explore our accessories collection
+                </p>
 
+            </div>
 
-    </a>
-
-
-  </div>
-
-</section>
+        </a>
 
 
-
-<!-- ================= CONTACT ================= -->
-
-<section
-  class="homepage-contact"
-  id="contact">
+    </section>
 
 
-  <p>
-    ✦ GET IN TOUCH ✦
-  </p>
+    <!-- INSTAGRAM -->
+
+    <section
+        class="instagram"
+        id="contact">
+
+        <h2>Want to Order?</h2>
+
+        <p>
+            Send us a message on Instagram.
+        </p>
+
+        <a
+            href="https://www.instagram.com/nails__acessorios/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="instagram-button">
+
+            Message Us on Instagram
+
+        </a>
+
+    </section>
+
+</main>
 
 
-  <h2>
-    Want to Order?
-  </h2>
-
-
-  <p>
-    Send us a DM on Instagram
-    to place your order.
-  </p>
-
-
-  <a
-    href="https://www.instagram.com/mehwish.accessories/"
-    class="homepage-contact-button"
-    target="_blank">
-
-    Message Us on Instagram
-
-  </a>
-
-
-</section>
-
-
-
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
 
+    <img
+        src="images/logo.jpg"
+        alt="NAILS & ACESSÓRIOS">
 
-  <img
-    src="images/logo.jpg"
-    alt="NAILS & ACESSÓRIOS">
+    <h3>
+        NAILS & ACESSÓRIOS
+    </h3>
 
+    <a
+        href="https://www.instagram.com/nails__acessorios/"
+        target="_blank"
+        rel="noopener noreferrer">
 
-  <h3>
-    NAILS & ACESSÓRIOS
-  </h3>
+        @nails__acessorios
 
-
-  <p>
-    Nails • Accessories
-  </p>
-
-
-  <a
-    href="https://www.instagram.com/mehwish.accessories/"
-    target="_blank">
-
-    @mehwish.accessories
-
-  </a>
-
-
-  <p class="copyright">
-    © 2026 NAILS & ACESSÓRIOS
-  </p>
-
+    </a>
 
 </footer>
 
 
 </body>
-
 </html>
